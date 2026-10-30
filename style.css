@@ -1,0 +1,621 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    padding: 110px 30px 30px;
+    background-color: rgb(216, 241, 233);
+    font-family: Arial, sans-serif;
+    color: #163251;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(157, 207, 207);
+    height: 90px;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header-div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#header-div button {
+    background: none;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#header-div button:hover {
+    color: #204aa4;
+}
+
+#Contact,
+#resume-download {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#Contact {
+    background-color: rgb(37, 163, 37);
+    color: white;
+}
+
+#resume-download {
+    background-color: slategray;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#Contact:hover,
+#resume-download:hover {
+    transform: translateY(-3px);
+}
+
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    min-height: 450px;
+}
+
+#left-intro-div {
+    flex: 1;
+    min-width: 0;
+}
+
+#left-intro-div p {
+    line-height: 1.7;
+}
+
+#right-intro-div {
+    flex: 0 1 350px;
+    min-width: 0;
+    text-align: center;
+}
+
+#personal-photo {
+    width: 280px;
+    height: 280px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 5px solid rgb(24, 3, 249);
+}
+
+#name {
+    font-size: 35px;
+    color: rgb(24, 3, 249);
+    margin-top: 15px;
+}
+
+.headings {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#project-div {
+    width: 100%;
+    background-color: #629ad6;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#project-main-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.calc-card {
+    position: relative;
+    width: 400px;
+    flex: 0 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.calc-card:hover {
+    transform: scale(1.02);
+}
+
+.calc-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.portfolio-card {
+    width: 735px;
+    flex: 0 0 auto;
+}
+
+.calc-btn {
+    background-color: #163251;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.calc-btn:hover {
+    background-color: #0d1f3a;
+}
+
+#edu-div {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#education-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.education-card {
+    flex: 1 1 230px;
+    max-width: 400px;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(32, 74, 164, 0.2);
+}
+
+.education-card h3 {
+    font-size: 22px;
+    color: #204aa4;
+    margin-bottom: 15px;
+}
+
+.education-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.school-name {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.percentage {
+    display: inline-block;
+    background-color: #e8f0ff;
+    color: #204aa4;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 110px 20px 20px;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+
+    #intro-div {
+        gap: 25px;
+    }
+
+    #left-intro-div h1 {
+        font-size: 38px !important;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 150px 15px 20px;
+    }
+
+    header {
+        height: auto;
+        min-height: 90px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    header>div:first-child h1 {
+        font-size: 23px;
+    }
+
+    #header-div {
+        gap: 12px;
+    }
+
+    #header-div button {
+        font-size: 14px;
+    }
+
+    #Contact,
+    #resume-download {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    #intro-div {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 25px;
+    }
+
+    #right-intro-div {
+        flex: none;
+        width: 100%;
+    }
+
+    #left-intro-div {
+        width: 100%;
+    }
+
+    #left-intro-div h1 {
+        font-size: 32px !important;
+    }
+
+    #left-intro-div h2 {
+        font-size: 20px;
+    }
+
+    #left-intro-div p {
+        font-size: 17px !important;
+    }
+
+    #personal-photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    #name {
+        font-size: 28px;
+    }
+
+    .headings {
+        font-size: 29px;
+    }
+
+    #project-div {
+        padding: 25px 15px;
+    }
+
+    .calc-card {
+        flex-basis: 100%;
+    }
+
+    .calc-card img {
+        height: auto;
+    }
+
+    .education-card {
+        flex-basis: 100%;
+    }
+}
+
+#header-div a {
+    text-decoration: none;
+    color: #163251;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+#header-div a:hover {
+    color: #204aa4;
+}
+#skills-div {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.skill-card {
+    width: 200px;
+    padding: 25px 15px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(32, 74, 164, 0.2);
+}
+
+.skill-card h3 {
+    color: #204aa4;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #444;
+}
+
+
+#coding-div {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#coding-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.coding-card {
+    width: 280px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.coding-card:hover {
+    transform: translateY(-5px);
+}
+
+.coding-card h3 {
+    color: #204aa4;
+    margin-bottom: 12px;
+}
+
+.coding-card p {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.coding-card a {
+    display: inline-block;
+    background-color: #163251;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.coding-card a:hover {
+    background-color: #204aa4;
+}
+
+
+
+#achievements-div {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#achievements-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.achievement-card {
+    width: 280px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-card h3 {
+    color: #204aa4;
+    margin-bottom: 12px;
+}
+
+.achievement-card p {
+    color: #444;
+    line-height: 1.6;
+}
+
+
+#about-div {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+#about-div p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+
+#contact-div {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #629ad6;
+    border-radius: 20px;
+}
+
+#contact-div p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: #163251;
+    color: white;
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #204aa4;
+    transform: translateY(-3px);
+}
+
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+    background-color: rgb(157, 207, 207);
+    border-radius: 10px;
+    color: #163251;
+}
+
+@media (max-width: 600px) {
+    .skill-card,
+    .coding-card,
+    .achievement-card {
+        width: 100%;
+    }
+
+    #about-div p {
+        font-size: 16px;
+    }
+
+    #contact-div p {
+        font-size: 16px;
+    }
+}
+#home {
+    background-color: #629ad6;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+#coding-div {
+    background-color: rgb(157, 207, 207);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+#leetcode-highlight {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 25px;
+    padding: 18px 22px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#leetcode-highlight:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+#leetcode-logo {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e8e8e8;
+}
+
+#leetcode-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.leetcode-info h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #163251;
+}
+
+#leetcode-stats {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+#leetcode-stats h2 {
+    font-size: 23px;
+    color: rgb(32, 74, 164);
+}
+
+#leetcode-stats p {
+    font-size: 13px;
+    margin-top: 4px;
+    color: #555;
+}
